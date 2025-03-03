@@ -16,57 +16,74 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- daisy Ui CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="font-poppins">
   <!-- header part start -->
   <header class="w-10/12 mx-auto mt-3">
     <div class="navbar p-6 bg-base-100 rounded-xl">
-        <div class="navbar-start">
-            <a class="flex items-center gap-2 text-xl">
-                <img class="w-8" src="assets/logo.png" alt="">
-                <h1 class="font-bold"><span class="font-light">Dev</span>Board</h1>
-            </a>
-        </div>
-        <div class="navbar-end gap-9">
-          <button id="back-to-desk" class="btn bg-[#3752FD] text-white rounded-lg back-to-desk">Back To Desk</button>
+      <div class="navbar-start">
+        <a class="flex items-center gap-2 text-xl">
+          <img class="w-8" src="assets/logo.png" alt="">
+          <h1 class="font-bold"><span class="font-light">Dev</span>Board</h1>
+        </a>
+      </div>
+      <div class="navbar-end gap-9">
+        <button id="back-to-desk" class="btn bg-[#3752FD] text-white rounded-lg back-to-desk">Back To Desk</button>
       </div>
     </div>
-</header>
-<!-- header part end -->
+  </header>
+  <!-- header part end -->
+   
+<!-- main part start  -->
+  <main class="w-10/12 mx-auto mt-3 rounded-xl mb-10 space-y-5">
+    <h1 class="text-center text-xl font-bold">Blogs</h1>
+    <section class="space-y-5">
+      <div class="bg-white rounded-xl p-6">
+        <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-1: What are the different ways to
+          select an element in DOM?</h1>
+        <p class="pt-2">In DOM we can select an element by many ways like getElementById(), getElementsByClassName(),
+          querySelector(), querySelectorAll() </p>
+      </div>
+      <div class="bg-white rounded-xl p-6">
+        <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-2: What is the difference between
+          innerHTML, innerText, and textContent ?</h1>
+        <p class="pt-2">By using innerHTML() method we can see the inner html of an element and by using innerText()
+          method we can see the inner text of an element and by using textContent() method we can see the inner text of
+          an element with hidden text</p>
+      </div>
+      <div class="bg-white rounded-xl p-6">
+        <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-3: What is event delegation in the
+          DOM?</h1>
+        <p class="pt-2">ইভেন্ট ডেলিগেশনে আমরা একটি প্যারেন্ট নোডে একটি ইভেন্ট লিসেনার বরাদ্দ করি যার ফলে আমরা এর চাইল্ড
+          এলিমেন্ট দ্বারা ট্রিগার হওয়া ইভেন্টগুলি দক্ষতার সাথে পরিচালনা করতে পারি।</p>
+      </div>
+      <div class="bg-white rounded-xl p-6">
+        <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-4: What is event bubbling in the
+          DOM?</h1>
+        <p class="pt-2">যখন আমরা ব্রাউজারের যেকোনো জায়গায় ক্লিক করি তখন ইভেন্টটি তাৎক্ষণিকভাবে ক্লিক করা টার্গেটটি চিনতে
+          পারে না। এটি ইভেন্ট প্রোপাগেশন নামক একটি ক্রম অনুসরণ করে। প্রথমে এটি ক্যাপচারিং ফেজের মধ্য দিয়ে যায়: window
+          > document > html > head > body > h > ul > li। যখন এটি টার্গেট এলিমেন্টে (li) পৌঁছায়, তখন বাবলিং ফেজ শুরু
+          হয়, যেখানে ইভেন্টটি ব্যাক আপ প্রচার করে: li > ul > body > html > document > window। যদি এই যেকোনো পর্যায়ে
+          ইভেন্ট লিসেনারের যোগ করা হয় তাহলে সেগুলি সেই অনুযায়ী ট্রিগার হবে।
+        </p>
+      </div>
+      <div class="bg-white rounded-xl p-6">
+        <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-5: How do you create, add, and
+          remove elements using JavaScript?</h1>
+        <p class="pt-2">To create an element in JavaScript we use the createElement() method. We can add classes
+          including Tailwind CSS classes using the classListadd() method. Similarly we can remove specific classes using
+          the classList remove() method.</p>
+      </div>
+    </section>
+  </main>
+  <!-- main part end  -->
 
-<main class="w-10/12 mx-auto mt-3 rounded-xl mb-10 space-y-5">
-  <h1 class="text-center text-xl font-bold">Blogs</h1>
-  <section class="space-y-5">
-      <div class="bg-white rounded-xl p-6">
-          <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-1: What are the different ways to select an element in DOM?</h1>
-          <p class="pt-2"></p>
-      </div>
-      <div class="bg-white rounded-xl p-6">
-          <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
-          <p class="pt-2"></p>
-      </div>
-      <div class="bg-white rounded-xl p-6">
-          <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-3: What is event delegation in the DOM?</h1>
-          <p class="pt-2"></p>
-      </div>
-      <div class="bg-white rounded-xl p-6">
-          <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-4: What is event bubbling in the DOM?</h1>
-          <p class="pt-2"></p>
-      </div>
-      <div class="bg-white rounded-xl p-6">
-          <h1 class="font-bold border-b border-dashed border-slate-300 pb-2">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
-          <p class="pt-2"></p>
-      </div>
-  </section>
-</main>
-<!-- main part end  -->
 
-
-<script src="./script/script.js"></script>
-<script src="./script/utillitie.js"></script>
-<script src="./script/bloge.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="./script/utillitie.js"></script>
+  <script src="./script/bloge.js"></script>
 </body>
 
 </html>
