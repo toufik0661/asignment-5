@@ -28,8 +28,57 @@ document.getElementById('dayName').innerHTML = `
 ${dayName},
 `;
 document.getElementById('dayName-and-date').innerHTML =
-`${month}, ${day}, ${year}`;
+  `${month}, ${day}, ${year}`;
 
+
+//task assigned decremental and button disable and alert
+const taskAssigned = document.getElementById('task-assigned');
+const navCounter = document.getElementById('nav-counter');
+let count = parseInt(taskAssigned.innerText);
+let count2 = parseInt(navCounter.innerText);
+
+const completedButtons = document.querySelectorAll('.completed-btn');
+for (const completedButton of completedButtons) {
+  completedButton.addEventListener('click', function (event) {
+    //get title when button is clicked
+    let title = completedButton.parentNode.parentNode.childNodes[3];
+    let titleText = title.innerText;
+
+
+    //when button is clicked it will show alert and show history
+    if (count > 0) {
+      alert('Board updated successfully');
+      // for disabling buttons 
+      completedButton.setAttribute('disabled', 'true');
+
+      //decease the task assigned counter
+      count--;
+      taskAssigned.innerText = count;
+
+      //increase the nav counter
+      count2++
+      navCounter.innerText = count2;
+
+      //push the clicked button to the side bar
+      const p = document.createElement('p');
+      p.innerText = `You have completed the task ${titleText} at  ${time}`;
+      p.classList.add('bg-[#F4F7FF]', 'rounded-lg', 'p-2', 'mb-2', 'notification-text')
+      const div = document.getElementById('history');
+      div.appendChild(p);
+    }
+    if (count == 0) {
+      alert('Congrats! you have completed all the task');
+    }
+  })
+}
+
+//clear history
+document.getElementById('history-btn').addEventListener('click', function () {
+  const notifications = document.querySelectorAll('.notification-text');
+  for (const notification of notifications) {
+    notification.classList.add('hidden');
+  }
+});
 
 
 
